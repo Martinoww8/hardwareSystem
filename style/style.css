@@ -1,0 +1,771 @@
+html{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+body{
+    margin:0;
+    padding:0;
+    color:white;
+    height: 100%; 
+    min-height: 100%;
+    position: relative;
+    background-color:#233143;
+}
+
+.main-nav{
+    margin: 0;
+     padding: 0;
+    background-color:white;
+    color:black;
+    width:100%;
+    height:50px;
+    position:fixed;
+    z-index:1;
+    box-shadow: 1px 1px 3px grey;
+}
+
+.main-nav p {
+    margin: 0;
+    padding:0;
+}
+
+
+.main{
+    position:relative;
+    top: 50px;
+    bottom: 0;
+    margin-left:220px;
+    background-color:#f4f6f8;
+    min-height:94%;
+}
+
+.logo{
+    position: fixed;
+    top: 0px;
+    left:0px;
+    width: 220px;
+    height:50px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.addEmployee{
+    height:70%;
+    width:150px;
+    position:absolute;
+    right:230px;
+    padding:3px;
+    background-color:#233143;
+    margin:5px;
+    border-radius:10px;
+    color:white;
+}
+
+.addEmployee p, .addHardware p{
+    font-size:20px;
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+
+.addHardware{
+    height:70%;
+    width:150px;
+    position:absolute;
+    right:390px;
+    background-color:#233143;
+    margin:5px;
+    border-radius:10px;
+    color:white;
+    padding:3px;
+}
+
+.logo p{
+    width: 100%;
+    position:absolute;
+    top:20%;
+    text-align:center;
+    font-size:20px;
+}
+
+.user{
+    display:flex;
+    margin-right:20px;
+    float:right;
+    width:200px;
+    height:50px;
+    padding:10px;
+}
+
+.user p{
+    margin:auto;
+    left:50%;
+}
+
+.user:hover{
+    background-color: #dbdbdb;
+    cursor:pointer;
+}
+
+.profileInfo{
+    margin:10px; padding:10px;
+}
+
+.profileInfo button{
+    display:inline-block;
+    height:30px;
+    width:150px;
+    background-color: #233143; 
+    color:white;
+    margin-bottom:20px;
+}
+
+.user-dropmenu{
+    position:absolute;
+    background-color:white;
+    top: 55px;
+    right:20px;
+    z-index:10;
+    width:200px;
+    padding:0;
+}
+
+.user-dropmenu a{
+    text-decoration: none;
+    color:black;
+}
+
+.user-dropmenu p {
+    text-align:center;
+    padding:10px;
+}
+
+.user-dropmenu p:hover{
+    background-color:#dbdbdb;
+}
+
+.page-header{
+    display:inline-block;
+    padding:10px;
+    font-size:40px;
+}
+
+/* LEFT NAV */
+
+.left-nav{
+    position: fixed;
+    background-color:#233143;
+    color:#f4f6f8;
+    top: 50px;
+    bottom: 0;
+    left:0px;
+    width:220px;
+    z-index:10;
+}
+
+.left-nav-item div{
+    height:50px;
+    width:90%;
+    margin:10px;
+    padding:10px;
+    border-radius:5px;
+}
+
+.left-nav-item div:hover {
+    background-color:#44638b;
+}
+
+.left-nav-item {
+    text-decoration: none;
+    color:white;
+}
+
+.left-nav-item:hover{
+    color:white;
+}
+
+.left-nav-item div p{
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+.left-nav-date{
+    position:absolute;
+    bottom:50px;
+    width:100%;
+    height:50px;
+    padding:10px;
+}
+
+.left-nav-date p{
+    text-align:center;
+}
+
+.hide-button{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:50px;
+    background-color:rgb(3, 79, 99);
+    padding:10px;
+}
+
+.hide-button:hover{
+    cursor:pointer;
+    background-color:rgb(11, 119, 146); 
+}
+
+.hide-button p{
+    text-align:center;
+}
+
+#showLeftNavigation{
+    display:none;
+    position:fixed;
+    bottom:0;
+    background-color:#233143;
+    color:white;
+    height:50px;
+    width:50px;
+}
+
+#showLeftNavigation:hover{
+    background-color:#44638b;
+    cursor:pointer;
+}
+
+#showLeftNavigation p{
+    margin-top:9px;
+    padding:5px;
+    text-align:center;
+
+}
+
+/* -------- LEFT NAV SUBITEMS -------- */
+
+.left-nav-subitems{
+    border-bottom: 1px white;
+}
+
+.left-nav-subitems a{
+    text-decoration:none;
+    color:white;
+    padding:0;
+}
+
+.left-nav-subitems  div {
+    background-color:rgb(0, 90, 173);
+    border-radius: 10px;
+    margin:3px;
+}
+
+.left-nav-subitems a div p{
+    margin:0;
+    padding:10px;
+    text-align:center;
+}
+
+.left-nav-subitems a:hover{
+    color:white;
+}
+
+.left-nav-subitems a div:hover{
+    background-color:rgb(25, 126, 221);
+}
+
+#left-nav-item-dropdown{
+    cursor:pointer;
+}
+
+/* Modal box add Hardware / Employee */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 40px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+/* LOGIN PAGE */
+
+.login-main{
+    height:90%;
+}
+
+
+.login{
+    color:white;
+    width:500px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.login h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:60px;
+    margin:0;
+    padding:0;
+}
+
+
+.login-form input{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height:30px;
+    width:300px;
+    border-radius:5px;
+    outline-style: none;
+    padding:3px;
+    color:#233143;
+}
+
+.login-form input::placeholder{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#233143;
+    font-size: 18px;
+}
+
+.login-form button{
+    height:40px;
+    width:100px;
+    float:right;
+    margin-right:190px;
+    border-radius: 5px;
+    outline-style:none;
+    font-size:20px;
+    color:#233143;
+    background-color:rgb(231, 231, 231);
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.login-error{
+    background-color:rgb(255, 0, 0); 
+    color:white;
+    font-size:25px;
+    display:none;
+    padding:5px;
+    width:300px;
+    margin-top:100px;
+}
+
+/* DASHBOARD PAGE */
+
+.dashboard-header{
+    padding:10px;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-container a{
+    text-decoration:none;
+}
+
+.flex-container a div{
+    padding:10px;
+    border-radius:20px;
+    background-color:green;
+    color:black;
+    width:300px;
+    margin:10px;
+    height:300px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.flex-container a div:hover{
+    box-shadow: 10px 10px 10px grey;
+}
+
+.dashboard-item img{
+    margin:20% auto 20% auto;
+    display:block;
+    width:80px;
+    height:80px;
+}
+
+.dashboard-item > p{
+    font-size:40px;
+    margin-top:25%;
+    text-align:center;
+    color:white;
+    text-shadow: 2px 2px grey;
+}
+
+#dashboard-employees{
+    background: linear-gradient(90deg, rgb(245, 89, 89) 0%, rgb(173, 6, 6) 100%);
+}
+
+#dashboard-computers{
+    background: linear-gradient(90deg, rgb(255, 171, 92) 0%, rgb(177, 118, 10) 100%);
+}
+
+#dashboard-laptops{
+    background: linear-gradient(90deg, #e3f354 0%, rgb(163, 161, 6) 100%);
+}
+
+#dashboard-printers{
+    background: linear-gradient(90deg, rgb(111, 236, 86) 0%, rgb(11, 141, 22) 100%);
+}
+
+#dashboard-others{
+    background: linear-gradient(90deg, rgb(82, 189, 238) 0%, rgb(11, 119, 146)100%);
+}
+
+
+/* Hardware PAGE */
+
+
+.add-hardware a{
+    width:150px;
+}
+
+.add-hardware button{
+    display:inline-block;
+    height:30px;
+    width:150px;
+    background-color: #233143; 
+    color:white;
+    margin-left:80px;
+    margin-bottom:20px;
+}
+
+.add-hardware p{
+    width:150px;
+    text-align:center;
+    margin-top:10px;
+}
+
+.hardware-bar{
+    display:block;
+}
+
+.hardware-bar h3{
+    width:200px;
+}
+
+.hardware-bar form{
+    display:inline;
+    float:right;
+    margin-right:100px;
+}
+
+.hardware-bar form button{
+    background-color:#233143;
+    color:white;
+}
+
+.hardware-table{
+    margin:auto;
+    left:50%;
+    width:100%;
+}
+
+.hardware-table table{
+    width:90%;
+    margin:auto;
+}
+
+.hardware-table table tr{
+    border-width: 1px;
+    border-color:black;
+    border-style:solid;
+}
+
+.hardware-table table tr:nth-child(even) {
+    background-color: rgb(68, 99, 139, 0.8);
+    color:white
+  }
+
+.hardware-table table tr:nth-child(odd) {
+    background-color: rgb(0, 90, 173, 0.8);
+    color:white
+  }
+
+.hardware-table table tr th{
+    border-width: 1px;
+    border-color:black;
+    border-style:solid;
+    background-color:#233143;
+    color:white;
+}
+
+.hardware-table table tr td{
+    border-width: 1px;
+    border-color:black;
+    border-style:solid;
+}
+
+.hardwares_view_button{
+    background-color: #233143;
+    color:white;
+    outline: none;
+}
+
+/* Employee PAGE */
+
+.add-employee a{
+    width:150px;
+}
+
+.add-employee button{
+    display:inline-block;
+    height:30px;
+    width:150px;
+    background-color: #233143; 
+    color:white;
+    margin-left:80px;
+    margin-bottom:20px;
+}
+
+.add-employee p{
+    width:150px;
+    text-align:center;
+    margin-top:10px;
+}
+
+.employees-search{
+    display:block;
+}
+
+.employees-search h3{
+    width:200px;
+}
+
+.employees-search form{
+    display:inline;
+    float:right;
+    margin-right:100px;
+}
+
+.employees-search form button{
+    background-color:#233143;
+    color:white;
+}
+
+.employees-table{
+    margin:auto;
+    left:50%;
+    width:100%;
+}
+
+.employees-table table{
+    width:90%;
+    margin:auto;
+}
+
+.employees-table table tr{
+    border-width: 1px;
+    border-color:black;
+    border-style:solid;
+}
+
+.employees-table table tr:nth-child(even) {
+    background-color: rgb(68, 99, 139, 0.8);
+    color:white
+  }
+
+.employees-table table tr:nth-child(odd) {
+    background-color: rgb(0, 90, 173, 0.8);
+    color:white
+  }
+
+.employees-table table tr th{
+    border-width: 1px;
+    border-color:black;
+    border-style:solid;
+    background-color:#233143;
+    color:white;
+}
+
+.employees-table table tr td{
+    border-width: 1px;
+    border-color:black;
+    border-style:solid;
+}
+
+.employees_view_button{
+    background-color: #233143;
+    color:white;
+    outline: none;
+}
+
+/* MODAL ADD Hardware/ Employee */ 
+
+.modal-add{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #233143; /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+.input-desc{
+    display:inline-block;
+    width:100px;
+    margin-right:20px;
+}
+
+.modal-add-content {
+    background-color:#233143;
+    color:white;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+/* Hardware / Employee Profile */
+
+ .edit_button{
+     margin:0;
+     padding:0;
+ }
+
+ .edit_button button{
+     height:40px;
+     width:80px;
+     background-color:#233143;
+     outline-offset: none;
+     border:none;
+     color:white;
+     border-radius: 10px;
+     position:absolute;
+     top:18px;
+ }
+
+
+ /* Hardware View  */
+ .hardware-desc{
+    font-size:30px;
+    font-weight: bold;
+ }
+
+ .hardware-profile{
+     margin: 5px;
+     padding:10px;
+ }
+
+ .hardware-profile p{
+     font-size:30px;
+ }
+
+ /* Employee View */
+ .employee_desc{
+     font-size:30px;
+     font-weight: bold;
+ }
+
+ .person_profile{
+     margin:5px;
+     padding:10px;
+ }
+
+ .person_profile p{
+    font-size:30px;
+ }
+
+ .person_hardware{
+     margin:5px;
+     padding:10px;
+ }
+
+ .employee_hardware_table{
+     border: 1px solid black;
+ }
+
+ .employee_hardware_table tr th, td{
+     padding:5px;
+ }
+
+ .employee_hardware_table tr th{
+     border: 1px solid black;
+     background-color: #233143;
+     color: white;
+ }
+
+ 
+ .employee_hardware_table tr td{
+    border: 1px solid black;
+}
+
+/* Users Page */   
+.users-table{
+    margin:10px;
+    padding:10px;
+}
+
+.users-table tr th{
+    border: 1px solid black;
+    padding:5px;
+    background-color:#233143;
+    color:white;
+}
+
+.users-table tr td{
+    border: 1px solid black;
+    padding:5px;
+}
+
+.users-table button{
+    background-color:#233143;
+    outline-offset: none;
+    border:none;
+    color:white;
+    padding:5px;
+    border-radius: 10px;
+}
+
+.userRemoveButton{
+    height:40px;
+    width:150px;
+    background-color:#233143;
+    outline-offset: none;
+    border:none;
+    color:white;
+    border-radius: 10px;
+    position:absolute;
+    top:18px;
+}
